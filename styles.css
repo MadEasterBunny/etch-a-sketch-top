@@ -1,0 +1,20 @@
+#container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fcf6f6;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+    opacity: 1;
+}
