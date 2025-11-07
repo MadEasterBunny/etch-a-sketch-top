@@ -1,20 +1,20 @@
+:root {
+    --size: 16;
+}
+
 #container {
-    width: 100%;
-    max-width: 960px;
+    max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     background-color: #fcf6f6;
+    border: 1px solid #d4d4d4;
 }
 
 .square {
-    width: 200px;
-    height: 200px;
-    background-color: #000;
-    opacity: 0;
+    min-width: calc(100% / var(--size));
+    aspect-ratio: 1 / 1;
+    flex: 1;
+    outline: 1px solid #d4d4d4;
     transition: all 0.3s ease-in-out;
-}
-
-.square:hover {
-    opacity: 1;
 }
