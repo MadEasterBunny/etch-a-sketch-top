@@ -16,6 +16,11 @@ section > div {
     width: 640px;
 }
 
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
 #resize-grid-btn {
     margin-bottom: 15px;
 }
