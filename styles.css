@@ -2,9 +2,25 @@
     --size: 16;
 }
 
+h1 {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > div {
+    width: 640px;
+}
+
+#resize-grid-btn {
+    margin-bottom: 15px;
+}
+
 #container {
-    max-width: 500px;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     background-color: #fcf6f6;
