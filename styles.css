@@ -1,5 +1,9 @@
 :root {
-    --size: 16;
+    --gridSize: 16;
+    --r: 0;
+    --g: 0;
+    --b: 0;
+    --alpha: 0;
 }
 
 h1 {
@@ -33,9 +37,9 @@ section > div {
 }
 
 .square {
-    min-width: calc(100% / var(--size));
+    background-color: rgba(var(--r, 0), var(--g, 0), var(--b, 0), var(--alpha, 0));
+    min-width: calc(100% / var(--gridSize));
     aspect-ratio: 1 / 1;
     flex: 1;
     outline: 1px solid #d4d4d4;
-    transition: all 0.3s ease-in-out;
 }

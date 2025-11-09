@@ -19,17 +19,35 @@ const generateGrid = () => {
         container.appendChild(square);
     }
 
-    document.documentElement.style.setProperty("--size", gridSize);
+    document.documentElement.style.setProperty("--gridSize", gridSize);
 }
 
 const colorSquares = (squares) => {
     squares.forEach(square => {
-    square.addEventListener("mouseover", () => {
+    square.addEventListener("mouseenter", () => {
+        let r = 0;
+        let g = 0;
+        let b = 0;
+        let currOpacity = parseFloat(window.getComputedStyle(square).getPropertyValue("--alpha"));
+        let opacity = Math.min(currOpacity + 0.1, 1);
+
         if(blackColor) {
-            square.style.backgroundColor = "#000";
+            r = 0;
+            g = 0;
+            b = 0;
+            square.style.setProperty("--r", r);
+            square.style.setProperty("--g", g);
+            square.style.setProperty("--b", b);
         } else {
-            square.style.backgroundColor = `rgb(${randomNum(255)} ${randomNum(255)} ${randomNum(255)})`;
+            r = randomNum(255);
+            g = randomNum(255);
+            b = randomNum(255);
+            square.style.setProperty("--r", r);
+            square.style.setProperty("--g", g);
+            square.style.setProperty("--b", b);
         }
+
+        square.style.setProperty("--alpha", opacity);
     })
 })
 }
